@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/assets/css/home.css" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<h1><%= title %></h1>
+<div>
+    <form action="/create" method="POST">
+        <label>NAME : </label> <input type="text" name="name" placeholder="Enter Name" required>
+        <label>NUMBER : </label><input type="number" name="phoneNo" placeholder="Enter Phone no." required>
+        <input id="submit" type="submit">
+     </form>
+</div>
+<div id="contact-container">
+    <% for(i of contact) {%>
+        <ul>
+            <li><%= i.name %></li>
+            <li><%= i.phoneNo %></li>
+        </ul>
+        <%}%>
+</div>
