@@ -11,7 +11,11 @@ var Contact=[
   {
       name:"Dkahs",
       phoneNo:"9232"
-  }
+  },
+  {
+    name:"Dks",
+    phoneNo:"922"
+}
 
 ];
 app.get('/',function(req,res){
@@ -24,6 +28,11 @@ app.get('/',function(req,res){
 app.post('/create',function(req,res){
       Contact.push(req.body);
       return res.redirect('back');
+});
+app.get('/delete',function(req,res){
+    let contact= Contact.findIndex(contact => Contact.phoneNo === req.params.phoneNo);
+    Contact.splice(contact,1);
+    res.redirect('back');
 })
 app.listen(port,function(err,port){
     if(err){

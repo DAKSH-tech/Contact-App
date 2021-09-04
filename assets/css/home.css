@@ -35,3 +35,16 @@ li{
     padding: 20px;
     margin-left: 20%;
 }
+a{
+   color: red;
+   font-size:125%;
+}
+small{
+    height:50px;
+    width:50px;
+    background-color:whitesmoke;
+}
+small:hover{
+    background-color: whitesmoke;
+    border-radius: 30px;
+}
