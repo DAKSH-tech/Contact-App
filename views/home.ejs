@@ -14,9 +14,9 @@
     <% for(i of contact) {%>
         <ul>
             <li><%= i.name %></li>
-            <li><%= i.phoneNo %></li>
+            <li><%= i.phone %></li>
             <!-- <a href="/delete/?phoneNo=<%= i.phoneNo%>&name=<%= i.name%>">X</a> -->
         </ul>
-        <small id="delete"><a href="/delete/?phoneNo=<%= i.phoneNo%>">X</a></small>
+        <small id="delete"><a href="/delete/?id=<%= i._id%>">X</a></small>
         <%}%>
 </div>
